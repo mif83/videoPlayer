@@ -1,0 +1,41 @@
+ul, li{
+    margin:0;
+    padding: 5px;
+
+}
+.left{
+    display: inline-block;
+    width: 68%;
+    vertical-align: top;
+}
+.right{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+video{
+    width: 100%;
+
+}
+.right li:hover{
+    background: #dddddd;
+}
+.video-list span{
+    color:red;
+    text-align: center;
+    display: inline-block;
+    width: 1.1em;
+
+}
+.video-list span:hover{
+    color: #13b61b;
+    background: #bcbcbc;
+    border-radius: 50%;
+
+}
+.right h4{
+    margin-left: 10px;
+}
+.curent{
+    background: #cccccc;
+}
