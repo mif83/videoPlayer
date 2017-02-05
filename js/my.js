@@ -32,6 +32,13 @@ function chouseVideo(e) {
     }
 };
 function nextVideo(){
+    if ( video.dataset.loop) {
+        video.play();
+        return;
+    };
+    if (video.dataset.loop && trackList.length == curent){
+        curent = 0;
+    }
     if (trackList.length == 0 || trackList.length == curent) return;
 
     var list = document.querySelectorAll("#curent-play-list li");
@@ -46,6 +53,23 @@ function clearClassList(list) {
         list[i].classList.remove("curent");
     }
 }
+function changeInput(e) {
+   if(e.target.name == "autoplay"){
+       if (!video.autoplay) {
+           video.autoplay = true;
+           video.play();
+       } else {
+           video.autoplay = false;
+       }
+   }
+    if(e.target.name == "loop"){
+        if (!video.dataset.loop) {
+            video.dataset.loop = true;
+        } else {
+            video.dataset.loop = false;
+        }
+    }
+};
 video.addEventListener("ended", nextVideo);
 video.addEventListener("click", function(){
     if (video.paused){
@@ -54,4 +78,5 @@ video.addEventListener("click", function(){
         video.pause();
     }
 });
+document.body.addEventListener("change", changeInput)
 document.getElementById("right").addEventListener("click", chouseVideo);

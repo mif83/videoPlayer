@@ -17,6 +17,13 @@ video{
     width: 100%;
 
 }
+.right li{
+    border-bottom: 1px solid lightgrey;
+    padding-left:15px;
+}
+.right li:last-child{
+    border-bottom: none ;
+}
 .right li:hover{
     background: #dddddd;
 }
@@ -34,8 +41,11 @@ video{
 
 }
 .right h4{
-    margin-left: 10px;
+    margin:10px 0 10px 10px;
+}
+.right input{
+    margin-left: 25px;
 }
 .curent{
-    background: #cccccc;
+    background: #4aabe7;
 }

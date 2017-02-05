@@ -7,12 +7,15 @@
 </head>
 <body>
 <div class="left">
-    <video controls autoplay id="video" src="movie/1.mov">
+    <video controls id="video" src="movie/1.mov">
     </video>
 </div>
 <div class="right" id="right">
+    <h4>Управление</h4>
+    <input type="checkbox" id="autoplay" name="autoplay"><label for="autoplay">Autoplay</label>
+    <input type="checkbox" id="loop" name="loop"><label for="loop">Loop</label>
     <h4>Список файлов которые можете просмотреть или добавить в плейлист</h4>
-    <ol class="video-list">
+    <ul class="video-list">
         <li data-src="movie/1.mov">Горы 1 <span>+</span></li>
         <li data-src="movie/2.mov">Орел <span>+</span></li>
         <li data-src="movie/3.mov">Гепард <span>+</span></li>
@@ -20,8 +23,8 @@
         <li data-src="movie/5.mov">Зебра <span>+</span></li>
         <li data-src="movie/6.mov">Горы 3 <span>+</span></li>
         <li data-src="movie/7.mov">Парашутист <span>+</span></li>
-    </ol>
-    <h4>Текущий список воспроизведения</h4>
+    </ul>
+    <h4>Текущий плейлист</h4>
     <ol id="curent-play-list">
 
     </ol>
