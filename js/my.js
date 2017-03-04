@@ -1,9 +1,6 @@
 /**
  * Created by user on 04.02.17.
  */
-var video = document.getElementById("video"),
-    trackList =[],
-    curent = 0;
 function chouseVideo(e) {
     if (e.target.dataset.src && e.target.matches(".video-list li")) {
         var src = e.target.dataset.src;
@@ -53,6 +50,10 @@ function clearClassList(list) {
         list[i].classList.remove("curent");
     }
 }
+/**
+ * video player controls, autoplay and loop
+ * @param {Object} e  event
+ */
 function changeInput(e) {
    if(e.target.name == "autoplay"){
        if (!video.autoplay) {
@@ -70,6 +71,11 @@ function changeInput(e) {
         }
     }
 };
+
+var video = document.getElementById("video"),
+    trackList =[],
+    curent = 0;
+
 video.addEventListener("ended", nextVideo);
 video.addEventListener("click", function(){
     if (video.paused){
