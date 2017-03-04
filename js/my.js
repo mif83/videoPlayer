@@ -1,6 +1,11 @@
 /**
  * Created by user on 04.02.17.
  */
+/**
+ * selects the video to play in the player or selects the video to add in current playlist
+ * @param {Object} e event
+ */
+
 function chouseVideo(e) {
     if (e.target.dataset.src && e.target.matches(".video-list li")) {
         var src = e.target.dataset.src;
@@ -28,6 +33,9 @@ function chouseVideo(e) {
        }
     }
 };
+/**
+ * selects next video in the playlist
+ */
 function nextVideo(){
     if ( video.dataset.loop) {
         video.play();
@@ -45,6 +53,10 @@ function nextVideo(){
     video.setAttribute("src", trackList[curent++] );
 
 };
+/**
+ * Clear current playlist
+ * @param {HTMLElement[]} list  it is array <li> elements of #curent-play-list
+ */
 function clearClassList(list) {
     for (var i=0; i< trackList.length; i++){
         list[i].classList.remove("curent");
